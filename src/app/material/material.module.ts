@@ -31,6 +31,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatMenuModule,
     MatProgressSpinnerModule,
     MatPaginatorModule,
+    MatInputModule,
+    MatFormFieldModule,
 
   ],
   imports: [

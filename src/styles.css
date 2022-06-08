@@ -2,3 +2,11 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.btn-success {
+    background-color: #41bf49 !important;
+    border-color: #41bf49 !important;
+}
+.btn-success:hover, .btn-success:active, .btn-success:visited {
+    background-color: #36a03d !important;
+    border-color: #36a03d !important;
+}

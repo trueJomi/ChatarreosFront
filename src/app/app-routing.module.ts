@@ -9,6 +9,12 @@ const routes: Routes = [
     .then((m)=>m.VendedorModule)
   },
   {
+    path:'auth',
+    loadChildren:()=>
+    import('./auth/auth.module')
+    .then((m)=>m.AuthModule)
+  },
+  {
     path:'chatarrero',
     loadChildren:()=>
     import('./comprador/comprador.module')

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CrearSubastasService } from '../../shared/crear-subastas.service';
+import { Chatarra, Subasta } from '../../shared/model.clases';
 
 @Component({
   selector: 'app-new-subasta',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewSubastaComponent implements OnInit {
 
-  constructor() { }
+  subasta:Subasta = new Subasta();
 
-  ngOnInit(): void {
+  constructor(public servicoCrearSubastas:CrearSubastasService, private router:Router ) {
+    
   }
 
+  ngOnInit(): void {
+
+  }
+
+  CrearSubastasService(chatarra:Chatarra){
+    this.subasta.chatarra=chatarra
+    this.subasta.vendedor=1
+    this.servicoCrearSubastas.CrearSubasta(this.subasta).subscribe(
+      ()=>{
+        this.router.navigate(['']);
+      },
+      (error:any)=>{}
+    )
+
+  }    
+
 }
+

@@ -1,5 +1,5 @@
 import { Component,EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormGroup,FormBuilder, Validators } from '@angular/forms';
 import { Chatarra } from '../model.clases';
 
 @Component({
@@ -7,6 +7,8 @@ import { Chatarra } from '../model.clases';
   templateUrl: './form-subasta.component.html',
   styleUrls: ['./form-subasta.component.css']
 })
+
+
 export class FormSubastaComponent implements OnInit {
 
   form: FormGroup;
@@ -23,12 +25,11 @@ export class FormSubastaComponent implements OnInit {
     this.form = this.formBuilder.group(
       {
         titulo: [this.chatarra.titulo,[Validators.required]],
-        descripccion: [this.chatarra.description,[Validators.required]],
-        precioBase: [this.chatarra.precioBase,[Validators.required]],
+        description: [this.chatarra.description,[Validators.required]],
+        precioBase: [this.chatarra.precioBase,[Validators.required]]
       }
     );
   }
-  
   save(){
     this.onSubmit.emit(this.form.value)
   }

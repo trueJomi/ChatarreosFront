@@ -23,13 +23,14 @@
     "@fortawesome/fontawesome-free": "^6.1.1",
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.1.3",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.6.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.0.2",
+    "@angular-devkit/build-angular": "^13.3.7",
     "@angular/cli": "~13.0.2",
     "@angular/compiler-cli": "~13.0.0",
     "@types/jasmine": "~3.10.0",
@@ -41,5 +42,17 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.4.3"
-  }
+  },
+  "description": "",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pixgel/ChatarreosFront.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pixgel/ChatarreosFront/issues"
+  },
+  "homepage": "https://github.com/Pixgel/ChatarreosFront#readme"
 }

@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ListarComponent } from './layout/listar/listar.component';
 import { NewSubastaComponent } from './layout/new-subasta/new-subasta.component';
 import { TargetComponent } from './layout/targets/target.component';
+import { FormSubastaComponent } from './shared/form-subasta/form-subasta.component';
 
 
 @NgModule({
@@ -16,12 +17,13 @@ import { TargetComponent } from './layout/targets/target.component';
     ListarComponent,
     NewSubastaComponent,
     TargetComponent,
+    FormSubastaComponent
   ],
   imports: [
     CommonModule,
-    VendedorRoutingModule,
     MaterialModule,
-    ReactiveFormsModule
+    VendedorRoutingModule,
+    ReactiveFormsModule,
   ]
 })
 export class VendedorModule { }

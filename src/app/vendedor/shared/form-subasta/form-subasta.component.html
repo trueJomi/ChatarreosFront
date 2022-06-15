@@ -27,7 +27,7 @@
                 matInput
                 type="text"
                 placeholder="Descripcción"
-                formControlName="desripcción"
+                formControlName="description"
                 [value]="chatarra.description"
               />
       
@@ -42,16 +42,16 @@
               matInput
               type="number"
               placeholder="Precio Base"
-              formControlName="Precio Base"
+              formControlName="precioBase"
               [value]="chatarra.precioBase"
             />
     
-            <mat-error *ngIf="form.controls['total'].hasError('required')">
+            <mat-error *ngIf="form.controls['precioBase'].hasError('required')">
               Este campo es obligatorio
             </mat-error>
         </mat-form-field>
 
-          <button mat-button routerLink="home" >Cancelar</button>
+          <button mat-button routerLink="/home" >Cancelar</button>
 
           <button
               mat-raised-button
@@ -59,6 +59,7 @@
               type="submit"
               class="ms-2"
               [disabled]="frmSubasta.invalid"
+              routerLink="/home"
             >
               Guardar
           </button>

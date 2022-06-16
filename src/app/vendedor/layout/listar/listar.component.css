@@ -1,0 +1,21 @@
+
+button, .crear{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    left: 80%;
+    top: 80%;
+    background-color: #6DD5ED;
+    color: #42AA39;
+    font-size: 90px;
+    font-weight: bolder;
+    font-family:sans-serif;
+}
+
+button, .crear:hover{
+    /* background-color: #488d9c; */
+    color: #42aa39a0;
+    transition: 0.3s;
+}

@@ -9,7 +9,7 @@ const routes: Routes = [
     component: LoginCompradorComponent,
   },
   {
-    path: 'login-vendedor',
+    path: '',
     component: LoginVendedorComponent,
   }
 ];

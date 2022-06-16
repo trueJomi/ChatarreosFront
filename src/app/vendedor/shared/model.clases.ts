@@ -14,3 +14,15 @@ export class Chatarra{
     precioBase?:number
     vendedor?:number
 }
+
+export class Vendedor{
+    idVendedor?:number
+    user?:string
+    password?:string
+    phone?:string
+    name?:string
+    region?:string
+    ciudad?:string
+    distrito?:string
+    direccion?:string
+}

@@ -14,10 +14,18 @@
                     <div class="mb-3 form-group">
                         <label for="pwd">Contraseña</label>
                         <input type="password" class="form-control border-dark" id="pwd" name="pwd" [(ngModel)]="vendedor.password">
+                        
                     </div>
                     <br>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-success col-12">INICIAR SESION</button>
+                        <button 
+                            type="submit"
+                            class="btn btn-success col-12"
+                            [disabled]="loginform.invalid"
+                            routerLink="/vendedor"
+                            >
+                        INICIAR SESION
+                        </button>
                     </div>
                     <br>
                     <a routerLink="#">Si no tienes cuenta registrate aqui</a>

@@ -23,16 +23,18 @@
 
           <mat-form-field appearance="outline" class="d-block">
               <mat-label>Descripcción</mat-label>
-              <input
+              <textarea 
+                cols="30"
+                rows="10"
                 matInput
                 type="text"
                 placeholder="Descripcción"
                 formControlName="description"
-                [value]="chatarra.description"
-              />
+                [value]="chatarra.description">
+              </textarea>
       
               <mat-error *ngIf="form.controls['description'].hasError('required')">
-                Este campo es obligatorio
+                descripción obligatorio
               </mat-error>
           </mat-form-field>
 
@@ -43,26 +45,30 @@
               type="number"
               placeholder="Precio Base"
               formControlName="precioBase"
-              [value]="chatarra.precioBase"
-            />
+              [value]="chatarra.precioBase"/>
     
             <mat-error *ngIf="form.controls['precioBase'].hasError('required')">
               Este campo es obligatorio
             </mat-error>
         </mat-form-field>
+          <div class="d-flex justify-content-center" >
+            <button
+              class="col cancel" 
+              mat-button
+              routerLink="/vendedor">
+             Cancelar
+            </button>
 
-          <button mat-button routerLink="/vendedor" >Cancelar</button>
-
-          <button
-              mat-raised-button
-              color="primary"
-              type="submit"
-              class="ms-2"
-              [disabled]="frmSubasta.invalid"
-              routerLink="/vendedor"
-            >
+            <button
+                ngClass="col submit"
+                mat-raised-button
+                type="submit"
+                class="ms-2"
+                [disabled]="frmSubasta.invalid"
+                routerLink="/vendedor">
               Guardar
-          </button>
+            </button>
+          </div>
         
         </form>
     </div>

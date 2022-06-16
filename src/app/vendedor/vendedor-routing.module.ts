@@ -13,12 +13,12 @@ const routes: Routes = [
         path:'',
         component:ListarComponent
       },
-      {
-        path:'crearSubasta',
-        component:NewSubastaComponent
-      }
     ]
   },
+  {
+    path:'crearSubasta',
+    component:NewSubastaComponent
+  }
   
 
 ];

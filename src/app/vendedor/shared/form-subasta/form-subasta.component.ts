@@ -1,5 +1,5 @@
 import { Component,EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormGroup,FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup,UntypedFormBuilder, Validators } from '@angular/forms';
 import { Chatarra } from '../model.clases';
 
 @Component({
@@ -11,14 +11,14 @@ import { Chatarra } from '../model.clases';
 
 export class FormSubastaComponent implements OnInit {
 
-  form: FormGroup;
+  form: UntypedFormGroup;
 
   @Input() chatarra:Chatarra= new Chatarra();
 
   @Output() onSubmit:EventEmitter<any> = new EventEmitter();
 
   constructor(
-    private formBuilder:FormBuilder,
+    private formBuilder:UntypedFormBuilder,
   ) { }
 
   ngOnInit(): void {

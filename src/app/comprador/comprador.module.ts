@@ -7,6 +7,7 @@ import { ListarComponent } from './layout/listar/listar.component';
 import { SubastaCComponent } from './subasta-c/subasta-c.component';
 import { HistorialComponent } from './layout/historial/historial.component';
 import { ActivasComponent } from './layout/activas/activas.component';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import { ActivasComponent } from './layout/activas/activas.component';
     ListarComponent,
     SubastaCComponent,
     HistorialComponent,
-    ActivasComponent
+    ActivasComponent,
   ],
   imports: [
     CommonModule,

@@ -11,14 +11,14 @@ export class ListarComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe((paramMap: any) => {
+    //this.route.paramMap.subscribe((paramMap: any) => {
 
-      const { params } = paramMap
-      console.log(sessionStorage.getItem('key'))
-      console.log('params : ', paramMap)
-      sessionStorage.setItem('param', params.id);
-      this.router.navigate([`/chatarrero/home/${sessionStorage.getItem('idShopper')}`])
-    })
+      //const { params } = paramMap
+      //console.log(sessionStorage.getItem('key'))
+      //console.log('params : ', paramMap)
+      //sessionStorage.setItem('param', params.id);
+      //this.router.navigate([`/chatarrero/home/${sessionStorage.getItem('idShopper')}`])
+    //})
   }
 
 }

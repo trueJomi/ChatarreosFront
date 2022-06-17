@@ -15,7 +15,7 @@ const routes: Routes = [
     .then((m)=>m.AuthModule)
   },
   {
-    path:'Compraodor-home',
+    path:'Comprador-home',
     loadChildren:()=>
     import('./comprador/comprador.module')
     .then((m)=>m.CompradorModule)

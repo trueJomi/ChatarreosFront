@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 import { Comprador } from 'src/app/comprador/shared/comprador';
 import { LoginService } from '../shared/login.service';
 
@@ -12,7 +13,7 @@ export class LoginCompradorComponent implements OnInit {
   comprador = new Comprador();
   msg='';
 
-  constructor(private service:LoginService, private router:Router) { }
+  constructor(private service:LoginService, private router:Router,private cookieService: CookieService) { }
 
   ngOnInit(): void {
   }
@@ -21,11 +22,9 @@ export class LoginCompradorComponent implements OnInit {
     this.service.loginComprador(this.comprador).subscribe(
       res => {
         console.log(res);
-        sessionStorage.setItem('key', res);
-        console.log(sessionStorage.getItem('key'))
-        const { idShopper } = res
-        this.router.navigate([`/chatarrero/home/${idShopper}`])
-        sessionStorage.setItem('idShopper', idShopper)
+        var idShopper = res.idShopper;
+        this.cookieService.set('sesion', idShopper);
+        this.router.navigate([`Comprador-home`])
       },
       err => {
         console.log(err);

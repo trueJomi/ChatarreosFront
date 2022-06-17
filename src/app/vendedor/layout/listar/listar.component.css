@@ -15,7 +15,6 @@ button, .crear{
 }
 
 button, .crear:hover{
-    /* background-color: #488d9c; */
-    color: #42aa39a0;
+    background-color: #74e4fd;
     transition: 0.3s;
 }

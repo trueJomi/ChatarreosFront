@@ -5,7 +5,7 @@ import { LoginVendedorComponent } from './login-vendedor/login-vendedor.componen
 
 const routes: Routes = [
   {
-    path: 'login-comprador',
+    path: 'comprador',
     component: LoginCompradorComponent,
   },
   {

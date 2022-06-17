@@ -9,6 +9,9 @@ import { ListarComponent } from './layout/listar/listar.component';
 import { NewSubastaComponent } from './layout/new-subasta/new-subasta.component';
 import { TargetComponent } from './layout/targets/target.component';
 import { FormSubastaComponent } from './shared/form-subasta/form-subasta.component';
+import { HistorialComponent } from './layout/historial/historial.component';
+import { SubastaComponent } from './subasta/subasta.component';
+import { EditSubastaComponent } from './layout/edit-subasta/edit-subasta.component';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { FormSubastaComponent } from './shared/form-subasta/form-subasta.compone
     ListarComponent,
     NewSubastaComponent,
     TargetComponent,
-    FormSubastaComponent
+    FormSubastaComponent,
+    HistorialComponent,
+    SubastaComponent,
+    EditSubastaComponent
   ],
   imports: [
     CommonModule,

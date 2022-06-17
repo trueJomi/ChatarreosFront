@@ -16,7 +16,7 @@ export class LayoutComponent implements OnInit {
 
   ngOnInit(): void {
     var sesionCookie:string=this.cookieService.get('sesion')
-    if (sesionCookie==null){
+    if (sesionCookie==""){
       this.router.navigate(['comprador'])
     }
 

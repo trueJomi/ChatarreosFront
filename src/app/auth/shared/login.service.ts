@@ -15,6 +15,7 @@ export class LoginService {
   public loginComprador(comprador: Comprador):Observable<any>{
     return this.http.post(`${this.apiBase}comprador/login`,comprador)
   }
+  
   public loginVendedor(vendedor: Vendedor):Observable<any>{
     return this.http.post(`${this.apiBase}vendedor/login`,vendedor)
   }

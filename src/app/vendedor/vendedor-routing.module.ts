@@ -31,7 +31,7 @@ const routes: Routes = [
     component:EditSubastaComponent
   },
   {
-    path:'subasta',
+    path:'subasta/:id',
     component:SubastaComponent
   }
   

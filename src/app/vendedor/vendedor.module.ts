@@ -12,6 +12,7 @@ import { FormSubastaComponent } from './shared/form-subasta/form-subasta.compone
 import { HistorialComponent } from './layout/historial/historial.component';
 import { SubastaComponent } from './subasta/subasta.component';
 import { EditSubastaComponent } from './layout/edit-subasta/edit-subasta.component';
+import { PropuestaComponent } from './subasta/propuesta/propuesta.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { EditSubastaComponent } from './layout/edit-subasta/edit-subasta.compone
     FormSubastaComponent,
     HistorialComponent,
     SubastaComponent,
-    EditSubastaComponent
+    EditSubastaComponent,
+    PropuestaComponent
   ],
   imports: [
     CommonModule,

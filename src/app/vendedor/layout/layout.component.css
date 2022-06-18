@@ -1,5 +1,6 @@
 .navbar{
     background-color: #23B7D9;
+    height: 66px;
 }
 .navbar > button{
     margin-left: 15px;

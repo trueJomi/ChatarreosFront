@@ -22,11 +22,15 @@ export class CrearSubastasService {
   }
 
   Listar(id:number){
-    return this.http.get<Subasta[]>(`${this.apiBase}${this.controller}/${id}`);
+    return this.http.get<Subasta[]>(`${this.apiBase}${this.controller}/mis/${id}`);
   }
 
   ListarEstado(id:number,estado:string){
     return this.http.get<Subasta[]>(`${this.apiBase}${this.controller}/estados/${id}/${estado}`);
+  }
+  
+  GetById(id:number){
+    return this.http.get<Subasta>(`${this.apiBase}${this.controller}/${id}`)
   }
 
 

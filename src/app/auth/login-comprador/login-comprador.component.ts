@@ -21,7 +21,7 @@ export class LoginCompradorComponent implements OnInit {
   login(){
     this.service.loginComprador(this.comprador).subscribe(
       res => {
-        console.log(res);
+        // console.log(res);
         var idShopper = res.idShopper;
         this.cookieService.set('sesion', idShopper);
         this.router.navigate([`Comprador-home`])

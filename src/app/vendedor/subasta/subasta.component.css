@@ -1,0 +1,18 @@
+.navbar{
+    background-color: #23B7D9;
+    height: 66px;
+}
+
+.propuestas{
+    height: 40%;
+    background-color: red;
+}
+
+.inferiror{
+    position: absolute;
+    height: 60%;
+    background-color: black;
+}
+.actual{
+    width: 100%;
+}

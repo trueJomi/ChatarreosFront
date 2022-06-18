@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CrearSubastasService } from '../../shared/crear-subastas.service';
 import { Chatarra, Subasta } from '../../shared/model.clases';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-new-subasta',
@@ -11,21 +12,27 @@ import { Chatarra, Subasta } from '../../shared/model.clases';
 export class NewSubastaComponent implements OnInit {
 
   subasta:Subasta = new Subasta();
+  idUser:number;
 
-  constructor(public servicoCrearSubastas:CrearSubastasService, private router:Router ) {
+  constructor(public servicoCrearSubastas:CrearSubastasService, private router:Router, private cookieService: CookieService) {
+
     
-  }
+  } 
 
   ngOnInit(): void {
-
+    var sesionCookie:string=this.cookieService.get('sesion')
+    if (sesionCookie== ""){
+      this.router.navigate([''])
+    }
+    this.idUser=+sesionCookie;
   }
 
-  CrearSubastasService(chatarra:Chatarra){
+  CrearSubasta(chatarra:Chatarra){
     this.subasta.chatarra=chatarra
-    this.subasta.vendedor=1
+    this.subasta.vendedor=this.idUser
     this.servicoCrearSubastas.CrearSubasta(this.subasta).subscribe(
-      ()=>{
-        this.router.navigate(['']);
+      (res:any)=>{
+        this.router.navigate(['/subasta',res.body.idSubasta]);
       },
       (error:any)=>{}
     )

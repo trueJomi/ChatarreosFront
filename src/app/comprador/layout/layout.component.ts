@@ -12,12 +12,14 @@ import { CookieService } from 'ngx-cookie-service';
 export class LayoutComponent implements OnInit {
   comprador:Comprador;
   nombre:string;
+  
   constructor(private router:Router,public compradorService:CompradorService,private cookieService: CookieService) { }
 
   ngOnInit(): void {
     var sesionCookie:string=this.cookieService.get('sesion');
     if (sesionCookie==""){
       this.router.navigate(['comprador']);
+      this.cookieService.delete('sesion');
     }
     else{
        this.getCompradorById();

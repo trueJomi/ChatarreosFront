@@ -14,7 +14,7 @@ export class CrearSubastasService {
   constructor(private http:HttpClient) {}
 
   CrearSubasta(subasta:Subasta){
-    return this.http.post<Subasta>(`${this.apiBase}${this.controller}`,subasta);
+    return this.http.post<Subasta>(`${this.apiBase}/subasta/crear`,subasta);
   }
 
   Eliminar(id:number){
@@ -27,6 +27,15 @@ export class CrearSubastasService {
 
   ListarEstado(id:number,estado:string){
     return this.http.get<Subasta[]>(`${this.apiBase}${this.controller}/estados/${id}/${estado}`);
+
+  }
+
+  update(subasta:Subasta){
+      return this.http.put<Subasta>(`${this.apiBase}/subasta/editar`,subasta);
+  }
+
+  getVendedor(id : number){
+    return this.http.get<Subasta>(`${this.apiBase}/vendedor/${id}`);
   }
   
   GetById(id:number){

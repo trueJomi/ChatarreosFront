@@ -31,8 +31,9 @@ export class NewSubastaComponent implements OnInit {
     this.subasta.chatarra=chatarra
     this.subasta.vendedor=this.idUser
     this.servicoCrearSubastas.CrearSubasta(this.subasta).subscribe(
-      (res:any)=>{
-        this.router.navigate(['/subasta', res.body.idSubasta]);
+      ()=>{
+        console.log('OK');
+        this.router.navigate(['']);
       },
       (error:any)=>{}
     )

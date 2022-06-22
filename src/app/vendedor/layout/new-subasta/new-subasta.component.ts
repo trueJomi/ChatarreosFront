@@ -20,11 +20,14 @@ export class NewSubastaComponent implements OnInit {
 
   }
 
-  CrearSubastasService(chatarra:Chatarra){
+  crear(chatarra:Chatarra){
+    console.log('..');
+    console.log('...');
     this.subasta.chatarra=chatarra
     this.subasta.vendedor=1
     this.servicoCrearSubastas.CrearSubasta(this.subasta).subscribe(
       ()=>{
+        console.log('OK');
         this.router.navigate(['']);
       },
       (error:any)=>{}

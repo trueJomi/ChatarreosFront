@@ -3,7 +3,7 @@ export class Subasta{
     fecha?:Date
     TiempoRecocjo?:Date
     status?:string
-    vendedor?:number
+    vendedor:number
     chatarra?:Chatarra
 }
 

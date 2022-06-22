@@ -1,7 +1,11 @@
+import { Propuesta } from "src/app/comprador/shared/propuesta"
+
 export class Subasta{
     idSubasta?:number
     fecha?:Date
-    TiempoRecocjo?:Date
+    seleccionado?:Propuesta
+    fechaRecojo?:Date
+    propuestas?:Propuesta[]
     status?:string
     vendedor?:number
     chatarra?:Chatarra

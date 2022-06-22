@@ -23,7 +23,7 @@ export class LoginVendedorComponent implements OnInit {
     this.service.loginVendedor(this.vendedor).subscribe(
       (res:any) => {
         // console.log(res);
-        var idVendedor = res.idVendedor;
+        var idVendedor = res.body.idVendedor;
         this.cookieService.set('sesion', idVendedor);
         this.router.navigate([`/home`])
       },

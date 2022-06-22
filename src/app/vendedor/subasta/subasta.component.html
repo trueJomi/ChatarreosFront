@@ -1,28 +1,47 @@
-<div class="navbar">
-    navbar
-</div>
+<div class="body1">
+    <div class="navbar">
+    
+    </div>
+    
+    <div class="propuestas" >
+        <app-propuesta [propuestas]="misPropuestas" >
+        </app-propuesta>
+    </div>
+    
+    <div class="inferiror position-absolute mx-auto">
+        <div class="justify-content-center mx-auto">
+            <div class="actual row" >
+                <div class="price">
+                    
+                </div>
+                <div class="nombre">
+        
+                </div>
+            </div>
+            <div class="subasta mt-5 mb-4">
+                <div class="titulo">
+                    {{chatarra.titulo}}
+                </div>
+                <div class="descripcción mt-3" >
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit molestiae odit quia aliquid eos magni nulla maiores? Quos, voluptatum ea. Sapiente eos fuga accusamus dolor odio. Corporis amet placeat laborum?
 
-<div class="propuestas" >
- hola
-</div>
-<div class="inferiror">
-    <div class="actual row" >
-        <div class="price">
 
-        </div>
-        <div class="nombre">
-
+                    <!-- {{chatarra.description}} -->
+                </div>
+            </div>
+            <div class="botones" >
+                <button class="return col-12">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="aceptar col" [disabled]="isNull()">
+                        ACEPTAR
+                </button>  
+            </div>
+                
         </div>
     </div>
-    <div class="subasta">
-        <div class="titulo">
-
-        </div>
-        <div class="descripcción" >
-            
-        </div>
-    </div>
 </div>
+
 
 
 

@@ -18,15 +18,7 @@ export class LayoutComponent implements OnInit {
   ngOnInit(): void {
     var sesionCookie:string=this.cookieService.get('sesion')
     if (sesionCookie==""){
-<<<<<<< HEAD
       this.router.navigate(['comprador'])
-=======
-      this.router.navigate(['comprador']);
-      this.cookieService.delete('sesion');
-    }
-    else{
-       this.getCompradorById();
->>>>>>> 0bb98cbac2f475d3c16afdf023d3574d4a3ff5f7
     }
   }
 

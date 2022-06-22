@@ -8,7 +8,7 @@ import { Subasta } from './model.clases';
 })
 export class CrearSubastasService {
 
-  private controller:string='crearSubasta'
+  private controller:string='subasta'
   private apiBase: string=environment.apiBase
 
   constructor(private http:HttpClient) {}

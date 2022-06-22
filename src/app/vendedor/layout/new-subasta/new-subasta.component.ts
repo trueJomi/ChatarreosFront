@@ -32,7 +32,7 @@ export class NewSubastaComponent implements OnInit {
     this.subasta.vendedor=this.idUser
     this.servicoCrearSubastas.CrearSubasta(this.subasta).subscribe(
       (res:any)=>{
-        this.router.navigate(['/subasta',res.body.idSubasta]);
+        this.router.navigate(['/subasta', res.body.idSubasta]);
       },
       (error:any)=>{}
     )

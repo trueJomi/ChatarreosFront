@@ -20,7 +20,5 @@ export class LoginService {
     return this.http.post(`${this.apiBase}vendedor/login`,vendedor)
   }
   //{{url_base}}vendedor/1
-  public BuscarIdVendedor(id:Number){
-    return this.http.get<any>(`${this.apiBase}vendedor/${id}`)
-  }
+  
 }

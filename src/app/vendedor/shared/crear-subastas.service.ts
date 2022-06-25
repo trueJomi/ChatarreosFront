@@ -46,6 +46,8 @@ export class CrearSubastasService {
     return this.http.put<Subasta>(`${this.apiBase}${this.controller}/eleccion/${idSubasta}/${idPropuesta}`,null)
   }
 
-
+  AsignacionAnulada(idSubasta:number){
+    return this.http.put(`${this.apiBase}${this.controller}/eleccionAnulada/${idSubasta}`,null)
+  }
 
 }

@@ -48,6 +48,7 @@ export class SubastaComponent implements OnInit {
             this.subasta.seleccionado= res.body.seleccionado;
             this.subasta.vendedor= res.body.vendedor;
             
+            
             this.chatarra.idChatarra=res.body.chatarra.idChatarra;
             this.chatarra.titulo=res.body.chatarra.titulo;
             this.chatarra.description= res.body.chatarra.description;
@@ -64,11 +65,13 @@ export class SubastaComponent implements OnInit {
               propuesta.subasta= res.body.propuestas[i].price;
               this.misPropuestas.push(propuesta);
             }
-             
+            // console.log(this.subasta)
+            if(this.subasta.status=='aceptado'){
+              this.router.navigate(['/home/espera',this.subasta.seleccionado.idPropuesta])
+            }  
+    
         });
-        if(this.subasta.status='aceptado'){
-          this.router.navigate(['/home/espera',this.subasta.seleccionado.idPropuesta])
-        }  
+        
     }
     
   }

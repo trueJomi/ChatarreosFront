@@ -36,6 +36,7 @@ export class SubastaComponent implements OnInit {
     if(idSubastaStr==null){
       this.router.navigate(['/home'])
     }
+
     else{
       var idSubasta:number=+idSubastaStr
       this.subastaService.GetById(idSubasta).subscribe(
@@ -63,9 +64,12 @@ export class SubastaComponent implements OnInit {
               propuesta.subasta= res.body.propuestas[i].price;
               this.misPropuestas.push(propuesta);
             }
+             
         });
+        if(this.subasta.status='aceptado'){
+          this.router.navigate(['/home/espera',this.subasta.seleccionado.idPropuesta])
+        }  
     }
-
     
   }
 

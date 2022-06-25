@@ -14,4 +14,8 @@ export class PropuestaService {
   createPropuesta(propuesta:Propuesta){
     return this.http.post<Propuesta>(`${this.apiBase}propuesta`,propuesta);
   }
+
+  BuscarPorId(id:number){
+    return this.http.get(`${this.apiBase}propuesta/${id}`)
+  }
 }

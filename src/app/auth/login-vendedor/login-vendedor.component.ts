@@ -5,7 +5,6 @@ import { Vendedor } from 'src/app/vendedor/shared/model.clases';
 
 
 import { LoginService } from '../shared/login.service';
-import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login-vendedor',
@@ -24,19 +23,11 @@ export class LoginVendedorComponent implements OnInit {
 
   login(){
     this.service.loginVendedor(this.vendedor).subscribe(
-<<<<<<< HEAD
       (res:any) => {
         // console.log(res);
         var idVendedor = res.body.idVendedor;
         this.cookieService.set('sesion', idVendedor);
         this.router.navigate([`/home`])
-=======
-      res => {
-        console.log(res);
-        var idVendedor = res.idVendedor;
-        this.cookieService.set('sesion', idVendedor);
-        this.router.navigate([`Vendedor-home`])
->>>>>>> ddf14e88b5c46baac616ed56940428e482805a57
       },
       error => {
         // console.log(err);

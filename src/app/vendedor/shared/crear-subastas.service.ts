@@ -42,6 +42,10 @@ export class CrearSubastasService {
     return this.http.get<Subasta>(`${this.apiBase}${this.controller}/${id}`)
   }
 
+  AsignarPropuesta(idSubasta:number, idPropuesta:number){
+    return this.http.put<Subasta>(`${this.apiBase}${this.controller}/eleccion/${idSubasta}/${idPropuesta}`,null)
+  }
+
 
 
 }

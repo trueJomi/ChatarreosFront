@@ -77,6 +77,35 @@ export class SubastaComponent implements OnInit {
       return false
     }
   }
+
+  compararPropuestas(){
+    var array:number[]=[]
+    for (var i in this.misPropuestas ){
+      var price:number=+this.misPropuestas[i].price
+      array.push(price);
+    }
+    var idAceptado:number=0                 
+    var max=Math.max(...array);
+    for (var i in this.misPropuestas){
+      if (+this.misPropuestas[i].price==max){
+        idAceptado= this.misPropuestas[i].idPropuesta
+      }
+    }
+    return idAceptado
+  }
+  AsegniarPropuesta(){
+    try{
+      this.subastaService.AsignarPropuesta(this.subasta.idSubasta,this.compararPropuestas()).subscribe(
+          (res:any)=>{
+            this.router.navigate(['/home/espera',res.body.seleccionado.idPropuesta])
+          }
+        )
+    }    
+    catch{
+      this.router.navigate(['/home'])
+    }
+    
+    
+  }
+
 }
-
-

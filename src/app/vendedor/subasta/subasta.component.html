@@ -30,10 +30,11 @@
                 </div>
             </div>
             <div class="botones" >
-                <button class="return col-12">
+                <button class="return col-12" 
+                routerLink="/home">
                     <i class="fa-solid fa-angle-left"></i>
                 </button>
-                <button class="aceptar col" [disabled]="isNull()">
+                <button class="aceptar col" [disabled]="isNull()" (click)="AsegniarPropuesta()">
                         ACEPTAR
                 </button>  
             </div>

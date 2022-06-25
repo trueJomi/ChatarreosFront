@@ -13,6 +13,7 @@ import { HistorialComponent } from './layout/historial/historial.component';
 import { SubastaComponent } from './subasta/subasta.component';
 import { EditSubastaComponent } from './layout/edit-subasta/edit-subasta.component';
 import { PropuestaComponent } from './subasta/propuesta/propuesta.component';
+import { EsperaComponent } from './subasta/espera/espera.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PropuestaComponent } from './subasta/propuesta/propuesta.component';
     HistorialComponent,
     SubastaComponent,
     EditSubastaComponent,
-    PropuestaComponent
+    PropuestaComponent,
+    EsperaComponent
   ],
   imports: [
     CommonModule,

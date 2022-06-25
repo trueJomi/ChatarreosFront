@@ -5,6 +5,7 @@ import { HistorialComponent } from './layout/historial/historial.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ListarComponent } from './layout/listar/listar.component';
 import { NewSubastaComponent } from './layout/new-subasta/new-subasta.component';
+import { EsperaComponent } from './subasta/espera/espera.component';
 import { SubastaComponent } from './subasta/subasta.component';
 
 const routes: Routes = [
@@ -32,10 +33,12 @@ const routes: Routes = [
   },
   {
     path:'subasta/:id',
-    component:SubastaComponent
+    component:SubastaComponent,
+  },
+  {
+    path:'espera/:idPropuesta',
+    component:EsperaComponent,
   }
-  
-
 ];
 
 @NgModule({

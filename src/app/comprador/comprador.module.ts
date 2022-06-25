@@ -7,7 +7,6 @@ import { ListarComponent } from './layout/listar/listar.component';
 import { SubastaCComponent } from './subasta-c/subasta-c.component';
 import { HistorialComponent } from './layout/historial/historial.component';
 import { ActivasComponent } from './layout/activas/activas.component';
-import { NewPropuestaComponent } from './layout/new-propuesta/new-propuesta.component';
 import { FormPropuestaComponent } from './shared/form-propuesta/form-propuesta.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
@@ -21,7 +20,6 @@ import { MaterialModule } from '../material/material.module';
     SubastaCComponent,
     HistorialComponent,
     ActivasComponent,
-    NewPropuestaComponent,
     FormPropuestaComponent,
   ],
   imports: [

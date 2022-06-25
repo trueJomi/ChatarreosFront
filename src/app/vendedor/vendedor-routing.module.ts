@@ -36,7 +36,7 @@ const routes: Routes = [
     component:SubastaComponent,
   },
   {
-    path:'espera/:idPropuesta',
+    path:'espera/:id',
     component:EsperaComponent,
   }
 ];

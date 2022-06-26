@@ -1,6 +1,6 @@
 import { Component,EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { UntypedFormGroup,UntypedFormBuilder, Validators } from '@angular/forms';
-import { Chatarra } from '../model.clases';
+import { Chatarra } from '../class/model.clases';
 
 @Component({
   selector: 'app-form-subasta',

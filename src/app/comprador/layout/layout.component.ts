@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Comprador } from '../shared/comprador';
+import { Comprador } from '../shared/class/comprador';
 import { CompradorService } from '../shared/comprador.service';
 import { CookieService } from 'ngx-cookie-service';
 

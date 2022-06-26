@@ -1,7 +1,7 @@
 import {HttpClient } from '@angular/common/http'
 import { environment } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
-import { Subasta } from './model.clases';
+import { Subasta } from './class/model.clases';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class CrearSubastasService {
   constructor(private http:HttpClient) {}
 
   CrearSubasta(subasta:Subasta){
-    return this.http.post<Subasta>(`${this.apiBase}/subasta/crear`,subasta);
+    return this.http.post<Subasta>(`${this.apiBase}${this.controller}/crear`,subasta);
   }
 
   Eliminar(id:number){

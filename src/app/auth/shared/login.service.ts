@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Comprador } from 'src/app/comprador/shared/comprador';
-import { Vendedor } from 'src/app/vendedor/shared/model.clases';
+import { Comprador } from 'src/app/comprador/shared/class/comprador';
+import { Vendedor } from 'src/app/vendedor/shared/class/model.clases';
 import { environment } from 'src/environments/environment';
 
 @Injectable({

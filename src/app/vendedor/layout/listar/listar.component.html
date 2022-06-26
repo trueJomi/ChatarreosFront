@@ -1,13 +1,8 @@
-<div *ngFor="let subasta of misSubastas">
+<div *ngFor="let i of targets">
 
-    <div class="target">
-        <div class="Titulo" >
-            {{subasta.chatarra.titulo}}
-        </div>
-        <div>
-            
-        </div>
-    </div>
+    <app-target [target]="i"  >
+        
+    </app-target>
 
 </div>
 

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
-import { Propuesta } from 'src/app/comprador/shared/propuesta';
+import { Propuesta } from 'src/app/comprador/shared/class/propuesta';
 import { CrearSubastasService } from '../shared/crear-subastas.service';
-import { Chatarra, Subasta } from '../shared/model.clases';
+import { Chatarra, Subasta } from '../shared/class/model.clases';
 
 @Component({
   selector: 'app-subasta',

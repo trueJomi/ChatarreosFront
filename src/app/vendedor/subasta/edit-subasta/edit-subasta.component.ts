@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CrearSubastasService } from '../../shared/crear-subastas.service';
-import { Chatarra, Subasta } from '../../shared/model.clases';
+import { Chatarra, Subasta } from '../../shared/class/model.clases';
 
 @Component({
   selector: 'app-edit-subasta',

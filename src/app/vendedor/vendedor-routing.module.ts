@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EditSubastaComponent } from './layout/edit-subasta/edit-subasta.component';
+import { EditSubastaComponent } from './subasta/edit-subasta/edit-subasta.component';
 import { HistorialComponent } from './layout/historial/historial.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ListarComponent } from './layout/listar/listar.component';
-import { NewSubastaComponent } from './layout/new-subasta/new-subasta.component';
+import { NewSubastaComponent } from './subasta/new-subasta/new-subasta.component';
 import { EsperaComponent } from './subasta/espera/espera.component';
 import { SubastaComponent } from './subasta/subasta.component';
 

@@ -1,4 +1,4 @@
-import { Propuesta } from "src/app/comprador/shared/propuesta"
+import { Propuesta, PropuestaExt } from "src/app/comprador/shared/propuesta"
 
 export class Subasta{
     idSubasta:number
@@ -9,6 +9,11 @@ export class Subasta{
     status:string
     vendedor:number
     chatarra:Chatarra
+}
+
+export class Target{
+    subasta:Subasta
+    propuesta:PropuestaExt;
 }
 
 export class Chatarra{

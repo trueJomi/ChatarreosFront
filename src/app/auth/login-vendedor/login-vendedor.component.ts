@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
-import { Vendedor } from 'src/app/vendedor/shared/model.clases';
+import { Vendedor } from 'src/app/vendedor/shared/class/model.clases';
 
 
 import { LoginService } from '../shared/login.service';

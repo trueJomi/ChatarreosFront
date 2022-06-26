@@ -18,4 +18,8 @@ export class PropuestaService {
   BuscarPorId(id:number){
     return this.http.get(`${this.apiBase}propuesta/${id}`)
   }
+
+  ObtenerMayor(idSubasta:number){
+    return this.http.get(`${this.apiBase}propuesta/mayor/${idSubasta}`)
+  }
 }

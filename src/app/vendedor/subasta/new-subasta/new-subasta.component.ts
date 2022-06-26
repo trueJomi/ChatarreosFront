@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CrearSubastasService } from '../../shared/crear-subastas.service';
-import { Chatarra, Subasta } from '../../shared/model.clases';
+import { Chatarra, Subasta } from '../../shared/class/model.clases';
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({
@@ -31,9 +31,8 @@ export class NewSubastaComponent implements OnInit {
     this.subasta.chatarra=chatarra
     this.subasta.vendedor=this.idUser
     this.servicoCrearSubastas.CrearSubasta(this.subasta).subscribe(
-      ()=>{
-        console.log('OK');
-        this.router.navigate(['']);
+      (res:any)=>{
+        this.router.navigate(['home/subasta',res.body.idSubasta]);
       },
       (error:any)=>{}
     )

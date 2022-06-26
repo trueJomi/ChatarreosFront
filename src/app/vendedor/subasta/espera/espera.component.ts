@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
-import { Comprador } from 'src/app/comprador/shared/comprador';
+import { Comprador } from 'src/app/comprador/shared/class/comprador';
 import { CompradorService } from 'src/app/comprador/shared/comprador.service';
-import { Propuesta } from 'src/app/comprador/shared/propuesta';
+import { Propuesta } from 'src/app/comprador/shared/class/propuesta';
 import { PropuestaService } from 'src/app/comprador/shared/propuesta.service';
 import { CrearSubastasService } from '../../shared/crear-subastas.service';
 

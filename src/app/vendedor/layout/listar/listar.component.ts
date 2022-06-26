@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
-import { Propuesta } from 'src/app/comprador/shared/propuesta';
+import { Comprador } from 'src/app/comprador/shared/class/comprador';
+import { Propuesta, PropuestaExt } from 'src/app/comprador/shared/class/propuesta';
+import { PropuestaService } from 'src/app/comprador/shared/propuesta.service';
 import { CrearSubastasService } from '../../shared/crear-subastas.service';
-import { Chatarra, Subasta } from '../../shared/model.clases';
+import { Chatarra, Subasta, Target} from '../../shared/class/model.clases';
 
 @Component({
   selector: 'app-listar',
@@ -12,12 +14,13 @@ import { Chatarra, Subasta } from '../../shared/model.clases';
 })
 export class ListarComponent implements OnInit {
 
-  misSubastas:Subasta[]=[]
+  targets:Target[]=[]
 
   constructor(
     private subastaService:CrearSubastasService,
     private router:Router,
-    private cookieService:CookieService
+    private cookieService:CookieService,
+    private propuestaService:PropuestaService,
     ) { }
 
   ngOnInit(): void {
@@ -43,28 +46,54 @@ export class ListarComponent implements OnInit {
           chatarra.titulo= res.body[i].chatarra.titulo;
           chatarra.description= res.body[i].chatarra.description;
           chatarra.precioBase= res.body[i].chatarra.precioBase;
-
-          var propuestas1:Propuesta[]=[]
-
-          for(var i in res.body[i].propuestas){
-            var propuesta:Propuesta= new Propuesta();
-            propuesta.idPropuesta= res.body[i].propuestas[i].idPropuesta;
-            propuesta.time=res.body[i].propuestas[i].time;
-            propuesta.comprador=res.body[i].propuestas[i].comprador;
-            propuesta.price= res.body[i].propuestas[i].price;
-            propuesta.subasta= res.body[i].propuestas[i].price;
-            propuestas1.push(propuesta);
-          }
-          subasta.propuestas=propuestas1;
+          subasta.propuestas=res.body[i].propuestas;
           subasta.chatarra=chatarra;
 
-          this.misSubastas.push(subasta)
+          this.propuestaService.ObtenerMayor(res.body[i].idSubasta).subscribe(
+            (resp:any)=>{
+                if(resp.body==null){
+                  var propuesta:PropuestaExt= new PropuestaExt();
+                  propuesta.price= res.body[i].chatarra.precioBase;
+                  var target:Target= new Target()
+                  target.subasta=subasta;
+                  target.propuesta=propuesta;
+                  this.targets.push(target)
+                }
+                else{
+                  var propuesta:PropuestaExt= new PropuestaExt();
+                  var comprador:Comprador= new Comprador();
+
+                  propuesta.idPropuesta= resp.body.idPropuesta;
+                  propuesta.price= resp.body.price;
+                  propuesta.subasta= resp.body.subasta;
+                  propuesta.time= resp.body.time;
+
+                  comprador.idShopper=resp.body.comprador.idShopper
+                  comprador.name=resp.body.comprador.name;
+                  comprador.area=resp.body.comprador.area;
+                  comprador.phone=resp.body.comprador.phone;
+                  comprador.status=resp.body.comprador.status;
+                  comprador.user=resp.body.comprador.user;
+
+                  propuesta.comprador= comprador;
+
+
+                  var target:Target= new Target()
+                  target.subasta=subasta;
+                  target.propuesta=propuesta;
+                  this.targets.push(target)
+                }
+                
+            }
+          )
+
         }
+
+        
       }
     )
 
   }
-  
 }
 
 

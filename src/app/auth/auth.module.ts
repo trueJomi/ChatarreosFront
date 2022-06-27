@@ -5,12 +5,14 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginCompradorComponent } from './login-comprador/login-comprador.component';
 import { FormsModule } from '@angular/forms';
 import { LoginVendedorComponent } from './login-vendedor/login-vendedor.component';
+import { RegistrarCompradorComponent } from './comprador/registrar.component';
 
 
 @NgModule({
   declarations: [
     LoginCompradorComponent,
-    LoginVendedorComponent
+    LoginVendedorComponent,
+    RegistrarCompradorComponent
   ],
   imports: [
     CommonModule,

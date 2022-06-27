@@ -1,0 +1,36 @@
+<div class="container col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Registrar Comprador</h3>
+      </div>
+      <div class="card-body">
+        <form action="">
+          <div class="form-group">
+            <label for="">Usuario:</label>
+            <input [(ngModel)]="persona.user" name="user" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Contraseña:</label>
+            <input [(ngModel)]="persona.password" name="password" type="password" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Telefono:</label>
+            <input [(ngModel)]="persona.phone" name="phone" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Nombres:</label>
+            <input [(ngModel)]="persona.name" name="name" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Area:</label>
+            <input [(ngModel)]="persona.area" name="area" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Status:</label>
+            <input [(ngModel)]="persona.status" name="status" type="text" class="form-control">
+          </div>
+          <button (click)="Guardar()" class="btn btn-success">Registrar</button>
+        </form>
+      </div>
+    </div>
+  </div>

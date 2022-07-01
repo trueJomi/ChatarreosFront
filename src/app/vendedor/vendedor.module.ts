@@ -7,7 +7,7 @@ import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListarComponent } from './layout/listar/listar.component';
 import { NewSubastaComponent } from './subasta/new-subasta/new-subasta.component';
-import { TargetComponent } from './layout/targets/target.component';
+import { TargetComponent } from './layout/listar/targets/target.component';
 import { FormSubastaComponent } from './shared/form-subasta/form-subasta.component';
 import { HistorialComponent } from './layout/historial/historial.component';
 import { SubastaComponent } from './subasta/subasta.component';
@@ -27,7 +27,7 @@ import { EsperaComponent } from './subasta/espera/espera.component';
     SubastaComponent,
     EditSubastaComponent,
     PropuestaComponent,
-    EsperaComponent
+    EsperaComponent,
   ],
   imports: [
     CommonModule,

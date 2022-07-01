@@ -16,18 +16,18 @@ export class LayoutComponent implements OnInit {
   constructor(private router:Router,public compradorService:CompradorService,private cookieService: CookieService) { }
 
   ngOnInit(): void {
-    var sesionCookie:string=this.cookieService.get('sesion')
+    var sesionCookie:string=this.cookieService.get('sesionC')
     if (sesionCookie==""){
       this.router.navigate(['comprador'])
     }
   }
 
   signOut(){
-    this.cookieService.delete('sesion')
+    this.cookieService.delete('sesionC')
     this.router.navigate([`comprador`]);
   }
   getCompradorById(){
-    var sesionCookie:string=this.cookieService.get('sesion')
+    var sesionCookie:string=this.cookieService.get('sesionC')
     console.log(sesionCookie);
     this.compradorService.getCompradorById(Number(sesionCookie)).subscribe((data: any) => {
       this.comprador=data['body']

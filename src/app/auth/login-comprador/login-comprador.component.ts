@@ -16,14 +16,17 @@ export class LoginCompradorComponent implements OnInit {
   constructor(private service:LoginService, private router:Router,private cookieService: CookieService) { }
 
   ngOnInit(): void {
+    var sesionCookie:string =this.cookieService.get('sesionC')
+    if(sesionCookie!=""){
+      this.router.navigate([`Comprador-home`])
+    }
   }
 
   login(){
     this.service.loginComprador(this.comprador).subscribe(
       res => {
-        // console.log(res);
         var idShopper = res.idShopper;
-        this.cookieService.set('sesion', idShopper);
+        this.cookieService.set('sesionC', idShopper);
         this.router.navigate([`Comprador-home`])
       },
       err => {

@@ -10,7 +10,7 @@ export class Propuesta {
 
 export class PropuestaExt{
     idPropuesta:number;
-    price:string;
+    price:number;
     time:Date;
     subasta:number;
     comprador:Comprador;

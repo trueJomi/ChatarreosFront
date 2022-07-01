@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Comprador } from 'src/app/comprador/shared/comprador';
+import { Comprador } from 'src/app/comprador/shared/class/comprador';
 import { environment } from 'src/environments/environment';
 
 

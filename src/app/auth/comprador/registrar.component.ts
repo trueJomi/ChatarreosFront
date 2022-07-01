@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Comprador } from 'src/app/comprador/shared/comprador';
+import { Comprador } from 'src/app/comprador/shared/class/comprador';
 import { CompradorService } from '../shared/comprador.service';
 
 

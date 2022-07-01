@@ -19,6 +19,10 @@ export class LoginVendedorComponent implements OnInit {
   constructor(private service:LoginService, private router:Router,private cookieService: CookieService) { }
 
   ngOnInit(): void {
+    var sesionCookie:string =this.cookieService.get('sesion')
+    if(sesionCookie!=""){
+      this.router.navigate([`/home`]);    
+    }
   }
 
   login(){

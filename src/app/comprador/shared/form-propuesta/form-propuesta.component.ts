@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Propuesta } from '../propuesta';
+import { Propuesta } from '../class/propuesta';
 import { PropuestaService } from '../propuesta.service';
 
 @Component({

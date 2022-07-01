@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
-import { Propuesta } from '../shared/propuesta';
+import { Propuesta } from '../shared/class/propuesta';
 import { PropuestaService } from '../shared/propuesta.service';
 
 @Component({

@@ -1,9 +1,9 @@
-import { Propuesta, PropuestaExt } from "src/app/comprador/shared/propuesta"
+import { Propuesta, PropuestaExt } from "src/app/comprador/shared/class/propuesta"
 
 export class Subasta{
     idSubasta:number
     fecha:Date
-    seleccionado:Propuesta
+    seleccionado:PropuestaExt
     fechaRecojo:Date
     propuestas:Propuesta[]
     status:string

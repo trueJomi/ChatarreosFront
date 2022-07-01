@@ -31,11 +31,11 @@ export class CrearSubastasService {
   }
 
   update(subasta:Subasta){
-      return this.http.put<Subasta>(`${this.apiBase}/subasta/editar`,subasta);
+      return this.http.put<Subasta>(`${this.apiBase}subasta/editar`,subasta);
   }
 
   getVendedor(id : number){
-    return this.http.get<Subasta>(`${this.apiBase}/vendedor/${id}`);
+    return this.http.get<Subasta>(`${this.apiBase}vendedor/${id}`);
   }
   
   GetById(id:number){

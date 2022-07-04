@@ -10,6 +10,7 @@ import { ActivasComponent } from './layout/activas/activas.component';
 import { FormPropuestaComponent } from './shared/form-propuesta/form-propuesta.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
+import { TargetComponent } from './layout/listar/targets/target.component';
 
 
 
@@ -21,6 +22,7 @@ import { MaterialModule } from '../material/material.module';
     HistorialComponent,
     ActivasComponent,
     FormPropuestaComponent,
+    TargetComponent
   ],
   imports: [
     CommonModule,

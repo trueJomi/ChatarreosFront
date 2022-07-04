@@ -50,4 +50,7 @@ export class CrearSubastasService {
     return this.http.put(`${this.apiBase}${this.controller}/eleccionAnulada/${idSubasta}`,null)
   }
 
+  ListarPorComprador(id:number){
+    return this.http.get(`${this.apiBase}${this.controller}/misc/${id}`)
+  }
 }

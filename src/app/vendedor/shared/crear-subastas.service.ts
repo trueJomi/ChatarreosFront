@@ -29,6 +29,9 @@ export class CrearSubastasService {
     return this.http.get<Subasta[]>(`${this.apiBase}${this.controller}/estados/${id}/${estado}`);
 
   }
+  ListarTodoPorEstado(estado:string){
+    return this.http.get<Subasta[]>(`${this.apiBase}${this.controller}/estados/${estado}`);
+  }
 
   update(subasta:Subasta){
       return this.http.put<Subasta>(`${this.apiBase}subasta/editar`,subasta);

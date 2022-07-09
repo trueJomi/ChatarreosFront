@@ -11,20 +11,12 @@
             </div>
         </div>
     </div>
+    <div class="mt-5" *ngFor="let i of targets">
 
-    <div class="row my-5">
-        <div class="col-12 my-2 d-flex justify-content-center">
-            <div class="card w-75 text-white" style="background-color: #25a6d9;" >
-                <div class="card-body">
-                    <h1 class="card-title">Vendedor: </h1>
-                    <p class="card-text">Descripcion: </p>
-                    <p class="card-text">Precio Inicial: </p>
-                    <p class="card-text">Fecha de Publicación: </p>
-                    <div class="text-center">
-                        <a [routerLink]="['subasta-c',89]" class="btn btn-primary">Ingresar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <app-targets [target]="i"></app-targets>
+    </div>
+    <div class="mt-5" *ngFor="let i of targetsAceptados">
+
+        <app-targets [target]="i"></app-targets>
     </div>
 </div>

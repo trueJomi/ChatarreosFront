@@ -20,6 +20,7 @@ export class LayoutComponent implements OnInit {
     if (sesionCookie==""){
       this.router.navigate(['comprador'])
     }
+    this.getCompradorById();
   }
 
   signOut(){
@@ -28,11 +29,10 @@ export class LayoutComponent implements OnInit {
   }
   getCompradorById(){
     var sesionCookie:string=this.cookieService.get('sesionC')
-    console.log(sesionCookie);
+    // console.log(sesionCookie);
     this.compradorService.getCompradorById(Number(sesionCookie)).subscribe((data: any) => {
       this.comprador=data['body']
       this.nombre=this.comprador.name
-      console.log(this.nombre)
     })
    }
 

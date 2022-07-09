@@ -22,4 +22,8 @@ export class PropuestaService {
   ObtenerMayor(idSubasta:number){
     return this.http.get(`${this.apiBase}propuesta/mayor/${idSubasta}`)
   }
+
+  RetirarseDeSubasta(idSubasta:number,idComprador:number){
+    return this.http.delete(`${this.apiBase}propuesta/${idSubasta}/${idComprador}`)
+  }
 }

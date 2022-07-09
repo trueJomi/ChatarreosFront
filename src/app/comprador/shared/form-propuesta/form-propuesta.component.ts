@@ -33,5 +33,6 @@ export class FormPropuestaComponent implements OnInit {
 
     propuesta.price = this.form.value['price']
     this.onSave.emit(propuesta);
+    
   }
 }

@@ -10,12 +10,8 @@ import { ActivasComponent } from './layout/activas/activas.component';
 import { FormPropuestaComponent } from './shared/form-propuesta/form-propuesta.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
-<<<<<<< HEAD
-import { TargetComponent } from './layout/listar/targets/target.component';
-=======
 import { TargetsComponent } from './layout/listar/targets/targets.component';
 import { PropuestaComponent } from './subasta-c/propuesta/propuesta.component';
->>>>>>> 79bfac869a2143299b93b602cfc43b6bcddb0ffc
 
 
 
@@ -27,12 +23,8 @@ import { PropuestaComponent } from './subasta-c/propuesta/propuesta.component';
     HistorialComponent,
     ActivasComponent,
     FormPropuestaComponent,
-<<<<<<< HEAD
-    TargetComponent
-=======
     TargetsComponent,
     PropuestaComponent,
->>>>>>> 79bfac869a2143299b93b602cfc43b6bcddb0ffc
   ],
   imports: [
     CommonModule,

@@ -12,6 +12,10 @@
     width: 100%;
     height: 40%;
     background-color: #41BF49;
+    font-size: 1.5rem;
+    text-align: justify;
+    padding-right: 3rem;
+    width: 100%;
 }
 
 .inferiror{
@@ -45,6 +49,23 @@
     background-color: rgb(63, 63, 63);
 }
 
+.cancelar{
+    margin-right: 0.5rem;
+    color: rgb(204, 0, 0);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    background-color: rgb(143, 0, 0);
+    border: rgb(143, 0, 0) solid 0.1rem ;
+}
+
+.cancelar:hover{
+    color: rgb(255, 0, 0);
+    background-color: rgb(194, 0, 0);
+    border: rgb(194, 0, 0) solid 0.1rem ;
+}
+
 .aceptar{
     margin-left: 0.7rem;
     text-align: center;
@@ -74,8 +95,8 @@
 .subasta{
     height: 13rem;
     padding-left: 3rem;
-    color: white;
-    font-size: 1.5rem;
+    color: rgb(63, 63, 63);
+    /* font-size: 1.5rem; */
     text-align: justify;
     padding-right: 3rem;
     width: 100%;

@@ -26,13 +26,21 @@ export class TargetComponent implements OnInit {
       class:"fa-solid fa-basket-shopping"
     }
 
-  ]
+  ];
+  @Input()
+  sesionCookie:number;
+  
+  notify:boolean=false;
 
   constructor(
     private propuestaService:PropuestaService,
   ) { }
 
   ngOnInit(): void {
+    if(this.target.seleccionado.comprador.idShopper==this.sesionCookie){
+      this.notify=true
+    }
+
     this.propuestaService.ObtenerMayor(this.target.idSubasta).subscribe(
       (res:any)=>{
         if(res.body==null){

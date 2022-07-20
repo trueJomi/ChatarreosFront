@@ -12,6 +12,7 @@ import { CrearSubastasService } from 'src/app/vendedor/shared/crear-subastas.ser
 export class ListarComponent implements OnInit {
 
   targets:Subasta[]=[]
+  sesionCookie:number;
 
   constructor(
     private subastaService:CrearSubastasService,
@@ -20,12 +21,9 @@ export class ListarComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    var sesionCookie:string=this.cookieService.get('sesionC')
-    if (sesionCookie==""){
-      this.router.navigate([''])
-    }
+    this.sesionCookie=+this.cookieService.get('sesionC')
 
-    this.subastaService.ListarPorComprador(+sesionCookie).subscribe(
+    this.subastaService.ListarPorComprador(this.sesionCookie).subscribe(
       (res:any)=>{
         for(var i in res.body){
           var subasta:Subasta=new Subasta();

@@ -30,8 +30,10 @@ export class Vendedor{
     password:string
     phone:string
     name:string
-    region:string
-    ciudad:string
+    departamento:string
+    provincia:string
+    latitud:number
+    longitud:number
     distrito:string
     direccion:string
 }

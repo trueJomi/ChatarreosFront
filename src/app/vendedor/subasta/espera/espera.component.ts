@@ -49,7 +49,9 @@ export class EsperaComponent implements OnInit {
           this.compradorService.getCompradorById(this.comprador.idShopper).subscribe(
             (res:any)=>{
               this.comprador.idShopper=res.body.idShopper;
-              this.comprador.area=res.body.area;
+              this.comprador.region=res.body.region;
+              this.comprador.distrito=res.body.distrito;
+              this.comprador.ciudad=res.body.ciudad;
               this.comprador.name=res.body.name;
               this.comprador.phone=res.body.phone;
               this.comprador.status=res.body.status;

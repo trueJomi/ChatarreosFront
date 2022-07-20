@@ -14,6 +14,7 @@ import { SubastaComponent } from './subasta/subasta.component';
 import { EditSubastaComponent } from './subasta/edit-subasta/edit-subasta.component';
 import { PropuestaComponent } from './subasta/propuesta/propuesta.component';
 import { EsperaComponent } from './subasta/espera/espera.component';
+import { FromVendedorComponent } from './shared/from-vendedor/from-vendedor.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { EsperaComponent } from './subasta/espera/espera.component';
     EditSubastaComponent,
     PropuestaComponent,
     EsperaComponent,
+    FromVendedorComponent,
   ],
   imports: [
     CommonModule,

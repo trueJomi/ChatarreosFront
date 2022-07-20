@@ -13,6 +13,8 @@ export class FormSubastaComponent implements OnInit {
 
   form: UntypedFormGroup;
 
+  @Input() return:string;
+
   @Input() chatarra:Chatarra= new Chatarra();
 
   @Output() onSubmit:EventEmitter<any> = new EventEmitter();
